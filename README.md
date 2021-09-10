@@ -13,6 +13,9 @@ parallelism strategies should be used. See other implementations such as
 One future direction for research is integrating this codebase with
 [swarm-jax](https://github.com/kingoflolz/swarm-jax), to achieve further scalability with pipeline parallelism.
 
+## What is this fork?
+This is a fork to fine tune the weights for the DeepTechno project. 
+
 ## Updates
 
 **12-07-21**: Added [guide to fine tuning](howto_finetune.md)
