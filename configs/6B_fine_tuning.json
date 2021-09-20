@@ -10,21 +10,21 @@
   "seq": 2048,
   "cores_per_replica": 8,
   "per_replica_batch": 1,
-  "gradient_accumulation_steps": 16,
+  "gradient_accumulation_steps": 32,
 
-  "warmup_steps": 3000,
-  "anneal_steps": 300000,
+  "warmup_steps": 75,
+  "anneal_steps": 1425,
   "lr": 1.2e-4,
   "end_lr": 1.2e-5,
   "weight_decay": 0.1,
-  "total_steps": 350000,
+  "total_steps": 1350,
 
   "tpu_size": 8,
 
   "bucket": "deep_techno_gpt-j_weights",
-  "model_dir": "mesh_jax_pile_6B_rotary",
+  "model_dir": "deep_techno_gpt-j_weights/checkpoints",
 
-  "train_set": "pile.train.index",
+  "train_set": "techno.train.index",
   "val_set": {
     "pile": "pile.val.index",
     "owt": "openwebtext2_new_inputs.val.index"
@@ -40,7 +40,7 @@
   ],
 
   "val_batches": 100,
-  "val_every": 500,
+  "val_every": 350001,
   "ckpt_every": 500,
   "keep_every": 10000,
 

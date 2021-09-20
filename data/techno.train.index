@@ -1,0 +1,3 @@
+gs://deep_techno_gpt-j_weights/datasets/bottom.tfrecords
+gs://deep_techno_gpt-j_weights/datasets/middle.tfrecords
+gs://deep_techno_gpt-j_weights/datasets/top.tfrecords
