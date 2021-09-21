@@ -22,11 +22,11 @@
   "tpu_size": 8,
 
   "bucket": "deep_techno_gpt-j_weights",
-  "model_dir": "deep_techno_gpt-j_weights/checkpoints",
+  "model_dir": "checkpoints",
 
   "train_set": "techno.train.index",
   "val_set": {
-    "pile": "pile.val.index",
+    "pile": "techno.val.index",
     "owt": "openwebtext2_new_inputs.val.index"
   },
 
