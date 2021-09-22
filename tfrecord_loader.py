@@ -3,6 +3,10 @@ import tensorflow as tf
 import numpy as np
 from transformers import GPT2TokenizerFast
 import itertools
+import sys
+
+#setting the python recursion limit way up high cause my dataset thicc
+sys.setrecursionlimit(5000)
 
 
 class TFRecordLoader:
