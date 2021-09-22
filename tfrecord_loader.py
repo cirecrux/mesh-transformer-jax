@@ -63,7 +63,7 @@ class TFRecordLoader:
     def get_samples(self):
         try:
             return next(self.sample_fn)
-        except StopIteration:
+        except StopIteration, RecursionError:
             self.reset()
             return self.get_samples()
 
