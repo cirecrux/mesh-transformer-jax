@@ -5,10 +5,6 @@ from transformers import GPT2TokenizerFast
 import itertools
 import sys
 
-#setting the python recursion limit way up high cause my dataset thicc
-sys.setrecursionlimit(5000)
-
-
 class TFRecordLoader:
     def __init__(self, index_fname, batch_size, parse_fn, map_fn=None, restore_state=None):
         if restore_state is not None:
