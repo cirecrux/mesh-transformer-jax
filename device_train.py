@@ -24,7 +24,7 @@ from mesh_transformer.util import clip_by_global_norm, additive_weight_decay
 import resource, sys
 resource.setrlimit(resource.RLIMIT_STACK, (2**29,-1))
 sys.setrecursionlimit(10000)
-print("recursion limit set: 10000)
+print("recursion limit set: 10000")
 
 def parse_args():
     # Parse command line arguments
