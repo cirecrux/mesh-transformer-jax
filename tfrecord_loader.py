@@ -33,6 +33,8 @@ class TFRecordLoader:
         self.sample_fn = self.sample_once()
 
     def reset(self):
+        #for debug
+        print(f"reset: this is self.used: {self.used} and this is self.clean_index: {self.clean_index}")
         self.file_idx = 0
         self.file_idx_init = True
         #debug
@@ -72,7 +74,7 @@ class TFRecordLoader:
         except StopIteration:
             self.reset()
             #for debug
-            print(f"this is self.used: {self.used} and this is self.clean_index: {self.clean_index}")
+            print(f"get_samples: this is self.used: {self.used} and this is self.clean_index: {self.clean_index}")
             time.sleep(1)
             print("StopIteration Excepted!")
             return self.get_samples()
