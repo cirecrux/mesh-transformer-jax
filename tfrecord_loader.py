@@ -63,8 +63,11 @@ class TFRecordLoader:
     def get_samples(self):
         try:
             return next(self.sample_fn)
-        except (StopIteration, RecursionError):
+        except StopIteration:
             self.reset()
+            #for debug
+            print(f"this is self.used: {self.used()} and this is self.clean_index: {self.clean_index}")
+            self.sample_fn()=self.sample_once()
             return self.get_samples()
 
     def get_state(self):
