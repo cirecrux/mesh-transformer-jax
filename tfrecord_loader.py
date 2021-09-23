@@ -4,6 +4,7 @@ import numpy as np
 from transformers import GPT2TokenizerFast
 import itertools
 import sys
+import time
 
 class TFRecordLoader:
     def __init__(self, index_fname, batch_size, parse_fn, map_fn=None, restore_state=None):
@@ -32,8 +33,9 @@ class TFRecordLoader:
     def reset(self):
         self.file_idx = 0
         self.file_idx_init = True
+        #debug
+        print(f"RESETTING USED LIST: {self.used}"
         self.used = []
-
         self.clean_index = list(filter(lambda x: x not in self.used, self.index))
         self.sample_fn = self.sample_once()
 
@@ -55,6 +57,8 @@ class TFRecordLoader:
                     continue
                 self.file_idx_init = True
                 self.file_idx = file_idx
+                #debug
+                print("data yielded!")
                 yield jax.tree_map(lambda x: x.reshape(self.bs + x.shape[1:]), data)
             self.used.append(i)
             self.file_idx = 0
@@ -67,6 +71,7 @@ class TFRecordLoader:
             self.reset()
             #for debug
             print(f"this is self.used: {self.used} and this is self.clean_index: {self.clean_index}")
+            time.sleep(1)
             return self.get_samples()
 
     def get_state(self):
