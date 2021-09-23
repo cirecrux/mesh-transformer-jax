@@ -21,8 +21,10 @@ from google.cloud.exceptions import NotFound
 from mesh_transformer.util import clip_by_global_norm, additive_weight_decay
 
 #setting the python recursion limit way up high cause my dataset thicc
-import sys
+import resource, sys
+resource.setrlimit(resource.RLIMIT_STACK, (2**29,-1))
 sys.setrecursionlimit(10000)
+print("recursion limit set: 10000)
 
 def parse_args():
     # Parse command line arguments
