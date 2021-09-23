@@ -18,6 +18,8 @@ class TFRecordLoader:
             self.used = []
 
         self.index = open(index_fname).read().splitlines()
+        #debug
+        print(str(self.index))
         self.clean_index = list(filter(lambda x: x not in self.used, self.index))
         self.bs = batch_size
         # self.seq = sample_size
@@ -72,6 +74,7 @@ class TFRecordLoader:
             #for debug
             print(f"this is self.used: {self.used} and this is self.clean_index: {self.clean_index}")
             time.sleep(1)
+            print("StopIteration Excepted!")
             return self.get_samples()
 
     def get_state(self):
