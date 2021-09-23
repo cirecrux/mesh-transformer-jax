@@ -66,7 +66,7 @@ class TFRecordLoader:
         except StopIteration:
             self.reset()
             #for debug
-            print(f"this is self.used: {self.used()} and this is self.clean_index: {self.clean_index}")
+            print(f"this is self.used: {self.used} and this is self.clean_index: {self.clean_index}")
             return self.get_samples()
 
     def get_state(self):
