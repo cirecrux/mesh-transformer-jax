@@ -34,7 +34,7 @@ class TFRecordLoader:
         self.file_idx = 0
         self.file_idx_init = True
         #debug
-        print(f"RESETTING USED LIST: {self.used}"
+        print(f"RESETTING USED LIST: {self.used}")
         self.used = []
         self.clean_index = list(filter(lambda x: x not in self.used, self.index))
         self.sample_fn = self.sample_once()
