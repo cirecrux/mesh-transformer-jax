@@ -3,8 +3,12 @@ import tensorflow as tf
 import numpy as np
 from transformers import GPT2TokenizerFast
 import itertools
+<<<<<<< HEAD
 import sys
 import time
+=======
+
+>>>>>>> parent of b81d0f3 (updated the tfrecord loader)
 
 class TFRecordLoader:
     def __init__(self, index_fname, batch_size, parse_fn, map_fn=None, restore_state=None):
