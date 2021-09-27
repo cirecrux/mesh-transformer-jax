@@ -27,7 +27,6 @@
   "train_set": "techno.train.index",
   "val_set": {
     "pile": "techno.val.index",
-    "owt": "openwebtext2_new_inputs.val.index"
   },
 
   "eval_harness_tasks": [
