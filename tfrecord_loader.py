@@ -65,6 +65,7 @@ class TFRecordLoader:
             return next(self.sample_fn)
         except StopIteration:
             self.reset()
+            print("loading more samples...")
             return self.get_samples()
 
     def get_state(self):
