@@ -21,7 +21,7 @@
 
   "tpu_size": 8,
 
-  "bucket": "deep_techno_gpt-j_weights",
+  "bucket": "deep_techno_gpt-j",
   "model_dir": "checkpoints",
 
   "train_set": "techno.train.index",
